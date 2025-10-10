@@ -1,5 +1,3 @@
-## Hi there 👋
-
 # 👋 Hello, this is 王驰宇 | Hi, I'm Chiyu Wang
 
 欢迎来到我的小天地！这里主要存放我的个人主页源码和一些折腾记录。  
