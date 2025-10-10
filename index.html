@@ -1,0 +1,306 @@
+---
+title: "Chiyu Wang | 王驰宇"
+layout: default
+---
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+<div class="center">
+  <img class="avatar" src="{{ '/assets/img/avatar.jpg' | relative_url }}" alt="avatar">
+  <h1>Chiyu Wang (王驰宇)</h1>
+  <div class="lang-toggle">
+    <span>Language / 语言：</span>
+    <button data-lang="en" class="active">English</button>
+    <button data-lang="zh">中文</button>
+  </div>
+  <p class="badges">
+    <img src="https://img.shields.io/badge/Location-Shenzhen%2C%20China-blue" alt="location">
+    <img src="https://img.shields.io/badge/Languages-ZH%20%7C%20EN-brightgreen" alt="lang">
+    <img src="https://img.shields.io/badge/Focus-LLM%20ICL%20%7C%20AI%20%7C%20Backend Development-orange" alt="focus">
+  </p>
+  <p class="lang-section" data-lang="en">
+    <a class="btn" href="{{ '/resume/resume_en.pdf' | relative_url }}">Download Résumé</a>
+  </p>
+  <p class="lang-section hidden" data-lang="zh">
+    <a class="btn" href="{{ '/resume/resume_cn.pdf' | relative_url }}">下载简历</a>
+  </p>
+</div>
+
+<hr class="sep">
+
+<section class="lang-section" data-lang="en">
+  <h2 class="section-title">About</h2>
+  <p>I’m Chiyu Wang, an master candidate in AI & Robotics at CUHK-Shenzhen with a B.Comp. in Software Design from Queen’s University. I work across Python backend and ML/NLP, shipping reliable, explainable AI from prototype to production.</p>
+
+  <h2 class="section-title">Education</h2>
+  <div class="list">
+    <div class="item">
+      <h4>CUHK-Shenzhen — Master in AI & Robotics</h4>
+      <small>2024.09 – 2026.06 (expected) · Core: Optimization, Advanced Algorithms, Advanced AI, Topics in AI I, Speech & Language Processing, NLP, Mathematics for Robotics, Machine Learning, Image Processing & Computer Vision, Robot Manipulation.</small>
+    </div>
+    <div class="item">
+      <h4>Queen’s University (Canada) — BSc Software Design</h4>
+      <small>2020.09 – 2024.06 · Core: Diff & Integral Calculus, Linear Algebra, Discrete Math, Statistics, Intro to Computing Science, Logic for Computing Science, System Level Programming, Data Structure, Software Specifications, Computer Architecture, Operating System, Software Quality Assurance, Human-Computer Interaction, Software Architecture, Programming Paradigms, Algorithms.</small>
+    </div>
+  </div>
+
+  <h2 class="section-title">Internships</h2>
+  <div class="list">
+    <div class="item">
+      <h4>China Telecom — Portal Website (Summer Intern)</h4>
+      <small>2023.07 – 2023.08 · Nanchang</small>
+      <div>Built backend routes, session and permission logic in Django; modularized login, menu and portal components. Implemented interactive pages and animations with Layui + JavaScript; integrated front-end component calls through a C++ extension layer. Delivered SSO and seamless page switching to aggregate internal platforms under one portal with consistent account state.</div>
+      <br />
+      <div>Stack: Python (Django), JavaScript, C++, Layui, Web integration.</div>
+    </div>
+    <div class="item">
+      <h4>Shenzhen Kuaiyu Tech — Digital Avatar (Summer Intern)</h4>
+      <small>2023.05 – 2023.07 · Nanchang</small>
+      <div>Trained, tested and tuned a Chinese Rasa dialog model; cleaned Chinese corpora and expanded multi-turn intents/entities. Designed prompt-engineering schemes and connected to ChatGPT for open-domain conversations with virtual avatars. Rewrote training samples from logs and added custom Actions to unify FAQ, task-oriented flows and chit-chat entry points.</div>
+      <br />
+      <div>Stack: Python, Rasa, Prompt Engineering</div>
+    </div>
+    <div class="item">
+      <h4>Shenzhen Kuaiyu Tech — Conversational AI (Summer Intern)</h4>
+      <small>2022.05 – 2022.08 · Nanchang</small>
+      <div>Implemented face detection/recognition with Python (OpenMV) and linked it to dialog entry for greeting after recognition. Deployed Chinese Rasa models with intent/entity dictionaries and custom Actions for Q&A, form collection and flow control. Ran dialog regression tests, filed issues, and iteratively retrained models and rules.</div>
+      <br />
+      <div>Stack: Python, OpenMV, Rasa, AI testing</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Research & Projects</h2>
+  <div class="stack">
+    <div class="card">
+      <div class="gallery">
+        {% assign imgs = site.static_files | where_exp: "f", "f.path contains '/assets/img/projects/p1_'" %}
+        {% for f in imgs %}
+          {% if f.path contains '.png' or f.path contains '.jpg' or f.path contains '.jpeg' %}
+            <img src="{{ f.path | relative_url }}" alt="p1 image">
+          {% endif %}
+        {% endfor %}
+      </div>
+      <h3>ICL vs CML (Academic, 2025.01–05)</h3>
+      <p>Built an ICL pipeline using SiliconFlow API to call Qwen2-1.5B/2.5-7B, ChatGLM3-6B, GLM-4-9B with unified invocation and parsing. Designed 5-shot/10-shot prompt templates for classification (integer labels) and regression (real values), enforced “numbers-only” outputs (temperature=0) and regex post-checks to avoid format drift. Benchmarked ICL on Iris (classification) and California Housing (regression) against SVM/Random Forest/MLP; standardized CML preprocessing and scripted evaluation for both tracks. Summarized ICL behavior across model size, K-shot, task type, prompt format and instruction clarity; proposed a hybrid “ICL guiding + CML learning” route.</p>
+      <p>Stack: Python, SiliconFlow API, ICL, Prompt Engineering, scikit-learn.</p>
+      <div class="btns">
+        <a class="btn primary" href="{{ '/assets/files/p1/p1.pdf' | relative_url }}" target="_blank">Open File</a>
+        <a class="btn ghost" href="https://github.com/chiyuwa/ML-Project" target="_blank">Code · GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="gallery">
+        {% assign imgs = site.static_files | where_exp: "f", "f.path contains '/assets/img/projects/p2_'" %}
+        {% for f in imgs %}
+          {% if f.path contains '.png' or f.path contains '.jpg' or f.path contains '.jpeg' %}
+            <img src="{{ f.path | relative_url }}" alt="p2 image">
+          {% endif %}
+        {% endfor %}
+      </div>
+      <h3>Greenhouse Booking System (Capstone, 2023.09–2024.04)</h3>
+      <p>Built a Django-based backend covering auth/roles/permissions, booking orders, invoices and admin pages. Designed MySQL schemas for greenhouse/growth-chamber zoning and benches; added pricing and settlement models with migrations. Developed an admin console (users/roles, accounts, orders/prices, research requests) and recent-actions tracking. Implemented booking visualization and business rules (zonal/bench selection, 26-area chamber map with “oven” flag, mandatory cleaning days, etc.). Wrote user and deployment manuals (env setup, DB config, Navicat import, Django migrations); added unit tests and error logging with email support.</p>
+      <p>Stack: Python (Django), MySQL, Navicat, HTML/CSS, ReportLab, unit testing.</p>
+      <div class="btns">
+        <a class="btn primary" href="{{ '/assets/files/p2/p2.pdf' | relative_url }}" target="_blank">Open File</a>
+        <a class="btn ghost" href="https://github.com/GenGen2020/Phytotron/tree/Wen" target="_blank">Code · GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="gallery">
+        {% assign imgs = site.static_files | where_exp: "f", "f.path contains '/assets/img/projects/p3_'" %}
+        {% for f in imgs %}
+          {% if f.path contains '.png' or f.path contains '.jpg' or f.path contains '.jpeg' %}
+            <img src="{{ f.path | relative_url }}" alt="p3 image">
+          {% endif %}
+        {% endfor %}
+      </div>
+      <h3>Bitcoin Software Architecture Report (2023.01–04)</h3>
+      <p>Mapped conceptual → technical architecture for transaction validation, blockchain, nodes/consensus, wallet/private key/address. Produced sequence and component diagrams for end-to-end flows (sign → broadcast → confirmation).</p>
+      <p>Stack: software architecture analysis, sequence diagram, block-chain fundamentals.</p>
+      <div class="btns">
+        <a class="btn primary" href="{{ '/assets/files/p3/p3.pdf' | relative_url }}" target="_blank">Open File</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="gallery">
+        {% assign imgs = site.static_files | where_exp: "f", "f.path contains '/assets/img/projects/p4_'" %}
+        {% for f in imgs %}
+          {% if f.path contains '.png' or f.path contains '.jpg' or f.path contains '.jpeg' %}
+            <img src="{{ f.path | relative_url }}" alt="p4 image">
+          {% endif %}
+        {% endfor %}
+      </div>
+      <h3>Interactive Shopping Assistant (2023.01–04)</h3>
+      <p>Designed discount-information aggregation, multi-channel categorization/search/display, and price-history/trend prototypes. Optimized typography, icons and flows for older users; completed usability walkthroughs and interaction deliverables.</p>
+      <p>Stack: UI/UX design, mobile app prototyping (demo).</p>
+      <div class="btns">
+        <a class="btn primary" href="{{ '/assets/files/p4/p4.pdf' | relative_url }}" target="_blank">Open File</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Skills • Languages • Others</h2>
+  <div class="list">
+     <div class="item"><h4>Computer Language</h4>
+      <div>proficient in python, capable of using C, Java, Html, C++, SQL, JavaScript, Prolog, Haskell, MathLab, Bash at fundamental level</div>
+    </div>
+    <div class="item"><h4>AI/ML</h4>
+      <div>PyTorch, Rasa, prompt engineering; ChatGPT/ChatGLM; RVC, GPT-SoVITS; Stable Diffusion WebUI</div>
+    </div>
+    <div class="item"><h4>Software Skills</h4>
+      <div>Git, MySQL/Navicat; Microsoft Office/WPS; Adobe Premiere; CapCut</div>
+    </div>
+    <div class="item"><h4>Languages</h4>
+      <div>Chinese, English</div>
+    </div>
+    <div class="item"><h4>Hobbies</h4>
+      <div>Mobile games, Basketball, Movies, Travelling, etc.</div>
+    </div>
+    <div class="item"><h4>Others</h4>
+      <div>Interested in LLM applications, conversational systems, and backend platforms; open to research collaborations.</div>
+    </div>
+  </div>
+</section>
+
+<section class="lang-section hidden" data-lang="zh">
+  <h2 class="section-title">关于我</h2>
+  <p>我是王驰宇，香港中文大学（深圳）AI与机器人硕士在读，加拿大皇后大学软件设计本科。熟悉 Python 后端与机器学习/NLP，做过门户系统、虚拟数字人对话和预约平台等项目，关注把可靠、可解释的 AI 工程化落地。</p>
+
+  <h2 class="section-title">教育经历</h2>
+  <div class="list">
+    <div class="item">
+      <h4>香港中文大学（深圳）— 人工智能与机器人 硕士</h4>
+      <small>2024.09 – 2026.06（预计）· 核心课程：优化算法，高阶计算机算法，高阶人工智能，人工智能选题I, ，语音语言处理, ，自然语言处理， 机器人数学基础，机器学习，图像处理与计算机视觉，机器人操作</small>
+    </div>
+    <div class="item">
+      <h4>加拿大皇后大学 — 计算机学士（软件设计）</h4>
+      <small>2020.09 – 2024.06 · 核心课程：微积分, 线性代数, 离散数学, 统计学, 计算机科学导论, 计算机科学逻辑, 系统编程, 数据结构, 软件规范, 计算机架构, 操作系统, 软件质量保证, 人机交互, 软件架构, 编程范式, 算法.</small>
+    </div>
+  </div>
+
+  <h2 class="section-title">实习经历</h2>
+  <div class="list">
+    <div class="item">
+      <h4>中国电信 — 门户网站（暑期实习）</h4>
+      <small>2023.07 – 2023.08 · 南昌</small>
+      <div>使用 Django 编写后台路由、会话与权限逻辑，完成登录、菜单与门户模块化拆分。通过 Layui + JavaScript 实现页面交互与动效；在 C++ 扩展层面完成前端组件调用对接。实现统一登录（SSO）与页面跳转，将既有内部工作平台入口聚合到门户，完成账号态的连续传递与回退导航</div>
+      <br />
+      <div>技术栈： Python (Django), JavaScript, C++, Layui, Web Integration</div>
+    </div>
+    <div class="item">
+      <h4>深圳快语科技 — 数字人（暑期实习）</h4>
+      <small>2023.05 – 2023.07 · 南昌</small>
+      <div>训练、测试并调参与中文语料清洗，完成 Rasa 对话模型的多轮意图与实体样本扩充。设计 Prompt 工程方案，实现与 ChatGPT 的对接，使使用者可以与虚拟人进行场景外自由对话。基于对话日志改写训练样本与自定义 Action，实现 FAQ、任务型流程与闲聊场景的统一接入</div>
+      <br />
+      <div>技术栈： Python, Rasa, Prompt Engineering</div>
+    </div>
+    <div class="item">
+      <h4>深圳快语科技 — 对话式 AI（暑期实习）</h4>
+      <small>2022.05 – 2022.08 · 南昌</small>
+      <div>使用 Python（OpenMV）实现人脸检测/识别并与对话入口联动，完成人脸识别后触发问候。部署并配置 Rasa 中文模型，接入意图/实体字典与自定义 Action，实现问答、表单式收集与流程控制。依据测试用例表单执行对话回归，整理问题单并据此修改训练数据与规则，完成若干轮模型复训与规则更新</div>
+      <br />
+      <div>技术栈： Python, OpenMV, Rasa, AI Testing</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">科研项目</h2>
+  <div class="stack">
+    <div class="card">
+      <div class="gallery">
+        {% assign imgs = site.static_files | where_exp: "f", "f.path contains '/assets/img/projects/p1_'" %}
+        {% for f in imgs %}
+          {% if f.path contains '.png' or f.path contains '.jpg' or f.path contains '.jpeg' %}
+            <img src="{{ f.path | relative_url }}" alt="p1 image">
+          {% endif %}
+        {% endfor %}
+      </div>
+      <h3>传统 ML 与 大模型 ICL 对比研究（2025.01–05）</h3>
+      <p>设计 ICL 实验流水线：基于 SiliconFlow API 接入 Qwen2-1.5B/2.5-7B、ChatGLM3-6B、GLM-4-9B 等指令微调大模型，统一调用与结果解析流程。构建 K-shot 提示模板（5-shot/10-shot）：分类任务输出整数标签；回归任务输出实数值；采用键-值对的自然语言特征描述；在提示中加入“仅输出数值”的明确约束，设置 temperature=0 并配合 正则校验 做后处理，避免格式偏差。数据与基线设置：选择 Iris（多分类）与 California Housing（回归）两类结构化数据；对比 ICL 与 SVM /Random Forest / MLP 等 CML 基线；CML 侧做标准化与分层切分，ICL 侧保留原始可读数值并做统一评测样本抽取与脚本化评估。组织对比与归纳：从模型规模、示例数量（K-shot）、任务类型（分类/回归）、提示格式与指令清晰度四个维度总结 ICL 表现特征与脆弱点，并提出 ICL 引导 + CML 学习的混合式路线作为后续方向</p>
+      <p>技术栈： Python、SiliconFlow API、ICL、Prompt Engineering、scikit-learn</p>
+      <div class="btns">
+        <a class="btn primary" href="{{ '/assets/files/p1/p1.pdf' | relative_url }}" target="_blank">查看文件</a>
+        <a class="btn ghost" href="https://github.com/chiyuwa/ML-Project" target="_blank">代码 · GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="gallery">
+        {% assign imgs = site.static_files | where_exp: "f", "f.path contains '/assets/img/projects/p2_'" %}
+        {% for f in imgs %}
+          {% if f.path contains '.png' or f.path contains '.jpg' or f.path contains '.jpeg' %}
+            <img src="{{ f.path | relative_url }}" alt="p2 image">
+          {% endif %}
+        {% endfor %}
+      </div>
+      <h3>温室预约与管理系统（2023.09–2024.04）</h3>
+      <p>以 Django 为核心搭建 Web 后台：完成用户注册/登录、角色与权限、预约单、订单与发票生成的后端接口与管理页。设计并落地 MySQL 数据库：按温室/生长箱的分区与工位规则建模；为预约、价格与订单结算建立表结构与迁移脚本。开发 管理员后台页面：包含用户组与权限、账户管理、订单与价格管理、研究请求等功能入口；实现最近操作追踪.完成预约可视化与规则约束：温室按区与工位选择（含 4 个区 10 个工位的规则）、生长箱 26 区域的选择与“oven”标识、项目结束后的强制清洁日不可预约等业务校验。编写用户手册与安装/部署文档：覆盖环境依赖、数据库配置、Navicat 建库导入、Django 迁移与运行指令。提供单元测试与错误日志能力：通过 python manage.py test 执行用例；异常信息记录并提供邮件支持渠道</p>
+      <p>技术栈： Python (Django), MySQL, Navicat, HTML/CSS, ReportLab, unit test</p>
+      <div class="btns">
+        <a class="btn primary" href="{{ '/assets/files/p2/p2.pdf' | relative_url }}" target="_blank">查看文件</a>
+        <a class="btn ghost" href="https://github.com/GenGen2020/Phytotron/tree/Wen" target="_blank">代码 · GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="gallery">
+        {% assign imgs = site.static_files | where_exp: "f", "f.path contains '/assets/img/projects/p3_'" %}
+        {% for f in imgs %}
+          {% if f.path contains '.png' or f.path contains '.jpg' or f.path contains '.jpeg' %}
+            <img src="{{ f.path | relative_url }}" alt="p3 image">
+          {% endif %}
+        {% endfor %}
+      </div>
+      <h3>比特币软件架构研究报告（2023.01–04）</h3>
+      <p>按概念架构 → 技术架构两层展开，梳理交易验证、区块链、节点与共识规则、钱包/私钥/地址的关系与交互流程。绘制时序与组件关系图呈现交易签名、广播与确认的端到端路径，形成结构化报告</p>
+      <p>技术栈： 软件架构分析, 绘制时序图, 区块链基础</p>
+      <div class="btns">
+        <a class="btn primary" href="{{ '/assets/files/p3/p3.pdf' | relative_url }}" target="_blank">查看文件</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="gallery">
+        {% assign imgs = site.static_files | where_exp: "f", "f.path contains '/assets/img/projects/p4_'" %}
+        {% for f in imgs %}
+          {% if f.path contains '.png' or f.path contains '.jpg' or f.path contains '.jpeg' %}
+            <img src="{{ f.path | relative_url }}" alt="p4 image">
+          {% endif %}
+        {% endfor %}
+      </div>
+      <h3>交互式购物助手设计（2023.01–04）</h3>
+      <p>设计折扣信息聚合流程，支持多渠道来源的分类、检索与展示；提供历史价格记录与趋势图的原型图设计。针对老年用户进行字号/图标/流程优化；完成可用性走查与交互稿输出</p>
+      <p>技术栈： UI/UX 设计, 移动应用原型开发(demo)</p>
+      <div class="btns">
+        <a class="btn primary" href="{{ '/assets/files/p4/p4.pdf' | relative_url }}" target="_blank">查看文件</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">技能 • 语言 • 其他</h2>
+  <div class="list">
+    <div class="item"><h4>计算机语言</h4>
+      <div>Python；C/C++；JavaScript；Django；Rasa；Prompt Engineering；NLP & LLM（ICL）；MySQL；Git；Linux；（OpenMV/OpenCV 基础）。</div>
+    </div>
+    <div class="item"><h4>AI技能</h4>
+      <div>Pytorch, Chatgpt, Chatglm, rasa, RVC, GPT_SoVITS, Stable Diffusion WebUI</div>
+    </div>
+    <div class="item"><h4>软件技能</h4>
+      <div>Git, MySQL/Navicat, Microsoft Offices, WPS, Adobe Pr, 剪映</div>
+    </div>
+    <div class="item"><h4>语言</h4>
+      <div>中文，英文(海外留学经验，可作为工作语言)</div>
+    </div>
+    <div class="item"><h4>语言</h4>
+      <div>电子游戏, 篮球, 电影, 旅游等</div>
+    </div>
+    <div class="item"><h4>其他</h4>
+      <div>关注大模型应用、对话系统与后端平台；欢迎科研与工程合作。</div>
+    </div>
+  </div>
+</section>
+
+<hr class="sep">
+<div class="footer-note center">© {{ "now" | date: "%Y" }} Chiyu Wang. Built with GitHub Pages.</div>

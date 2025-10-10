@@ -1,0 +1,10 @@
+title: "Chiyu Wang · 王驰宇"
+description: "AI & Robotics · Conversational AI · Backend Engineering"
+theme: jekyll-theme-cayman
+url: "https://chiyuwa.github.io"
+baseurl: "/chiyuwa"
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+github:
+  is_project_page: true
